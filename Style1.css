@@ -1,0 +1,796 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-family: "Rubik";
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+::-webkit-scrollbar {
+  background-color: white;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* .headr{
+    position: fixed;
+    top: -1%;
+    padding: 0 10%;
+    z-index: 87654;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+  } */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+nav {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  padding: 25px 0;
+  box-shadow: 5px 5px 5px 3px #0000001f;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+}
+nav span {
+  color: black;
+  font-size: 20px;
+}
+.fa-utensils {
+  color: red;
+}
+.FlexNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.FlexNav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+ }
+
+.FlexNav ul li a {
+  color: darkslategray;
+  font-weight: 400;
+}
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 120px;
+  gap: 10vw;
+  align-items: center;
+}
+.home .home-food {
+  margin-bottom: 65px;
+}
+.home-food h3 {
+  color: rgb(0, 0, 0);
+  font-size: 45px;
+}
+.loremPar {
+  margin: 20px 0px 30px;
+}
+.btn {
+  color: red;
+  position: relative;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+  border-image: initial;
+  border-radius: 10px;
+  padding: 10px 40px;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 600px;
+}
+
+.img {
+  margin-right: 10px;
+  width: 100%;
+  object-fit: contain;
+  position: relative;
+  animation-name: imageAnimate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes imageAnimate {
+  0% {
+    top: 20px;
+  }
+  50% {
+    top: 0px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.content h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 120px;
+  -webkit-text-stroke: 3px rgb(222, 226, 230);
+}
+
+.content h2 {
+  position: absolute;
+  text-transform: capitalize;
+  color: rgba(128, 128, 128, 0.59);
+}
+
+.content h2 span {
+  color: red;
+}
+
+.cards {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  /* height: 100vh; */
+}
+
+.cards .card {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  overflow-y: hidden;
+  border: 8px solid #c9c9c9;
+  padding: 5px;
+  padding-top: 20px;
+}
+.cards .card .hiddenImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  transition: all 0.4s ease-in-out;
+}
+.cards .card .hiddenImg img {
+  width: 100%;
+  height: 100%;
+}
+.cards .card:hover .hiddenImg {
+  top: 0;
+}
+.cont {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.cont h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 120px;
+  -webkit-text-stroke: 3px rgb(222, 226, 230);
+}
+
+.cont h2 {
+  position: absolute;
+  text-transform: capitalize;
+  color: rgba(128, 128, 128, 0.59);
+}
+
+.cont h2 span {
+  color: red;
+}
+
+.firstCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  gap: 5px;
+}
+
+.firstCards .longCard {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 20px;
+  position: relative;
+  border: 8px solid #0000001f;
+}
+
+.firstCards .longCard img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: all 0.4s;
+}
+.firstCards .longCard img:hover {
+  width: 90%;
+  transform: rotate(5deg);
+}
+
+.firstCards .longCard .price {
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  width: 40%;
+  text-align: center;
+  background-color: red;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: gray;
+  font-weight: bold;
+}
+
+.firstCards .longCard .btn {
+  text-align: center;
+  color: red;
+  border: 2px solid red;
+}
+.firstCards .longCard .text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.foodSection {
+  display: grid;
+  padding: 5px;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+.secoundCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  gap: 5px;
+}
+.secoundCards .longCard {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 20px;
+  position: relative;
+  border: 8px solid #0000001f;
+}
+
+.secoundCards .longCard img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: all 0.4s;
+}
+.secoundCards .longCard img:hover {
+  width: 90%;
+  transform: rotate(5deg);
+}
+.secoundCards .longCard .price {
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  text-align: center;
+  background-color: red;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: gray;
+  font-weight: bold;
+}
+
+.secoundCards .longCard .btn {
+  width: 200px;
+  color: red;
+  border: 2px solid red;
+  margin: 30px;
+  align-items: center;
+}
+.secoundCards .longCard h1 {
+  text-align: center;
+}
+.secoundCards .longCard .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.cont1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.cont1 h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 120px;
+  -webkit-text-stroke: 3px rgb(222, 226, 230);
+}
+
+.cont1 h2 {
+  position: absolute;
+  text-transform: capitalize;
+  color: rgba(128, 128, 128, 0.59);
+}
+
+.cont1 h2 span {
+  color: red;
+}
+.foodservice {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+}
+.foodservice .serv-1 img {
+  cursor: pointer;
+  border-width: 15px 0px 15px 15px;
+  border-style: solid solid solid;
+  border-color: rgb(221, 221, 221) rgb(221, 221, 221) rgb(221, 221, 221);
+  border-image: initial;
+  border-radius: 50%;
+  border-right: 0px;
+  transition: 0.5s;
+}
+.foodservice .serv-1 img:hover {
+  transform: rotate(360deg) scale(1.1);
+}
+.serv-1 .A-1 {
+  font-size: 25px;
+  font-family: "Sansita Swashed", cursive;
+  padding: 1rem !important;
+}
+
+.cont2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.cont2 h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 120px;
+  -webkit-text-stroke: 3px rgb(222, 226, 230);
+}
+
+.cont2 h2 {
+  position: absolute;
+  text-transform: capitalize;
+  color: rgba(128, 128, 128, 0.59);
+}
+
+.cont2 h2 span {
+  color: red;
+}
+
+.cards2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* overflow: hidden; */
+  gap: 5px;
+  position: relative;
+}
+.cards2 .card2 .hiddenImg1 img {
+  width: 350px;
+  height: 350px;
+}
+
+.card2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.hiddenText {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 100%;
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+  top: -100%;
+}
+.card2:hover .hiddenText {
+  top: 0;
+}
+
+.card2 .hiddenText {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.btn3 {
+  width: 500px;
+  padding: 10px;
+  color: red;
+  border: 2px solid red;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.cont3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.cont3 h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 120px;
+  -webkit-text-stroke: 3px rgb(222, 226, 230);
+}
+
+.cont3 h2 {
+  position: absolute;
+  text-transform: capitalize;
+  color: rgba(128, 128, 128, 0.59);
+}
+
+.cont3 h2 span {
+  color: red;
+}
+.foodreview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  position: relative;
+}
+.F-R {
+  position: relative;
+  border: 10px solid rgb(204, 200, 200);
+  background-color: black;
+  margin-top: 50%;
+  padding-top: 70px;
+}
+.F-R p {
+  color: wheat;
+  text-align: center;
+}
+.F-R img {
+  border: 10px solid rgb(204, 200, 200);
+  border-radius: 50%;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cont4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.cont4 h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 120px;
+  -webkit-text-stroke: 3px rgb(222, 226, 230);
+}
+
+.cont4 h2 {
+  position: absolute;
+  text-transform: capitalize;
+  color: rgba(128, 128, 128, 0.59);
+}
+
+.cont4 h2 span {
+  color: red;
+}
+label {
+  display: block;
+}
+.input-name {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15px;
+}
+.form1 input {
+  padding: 10px 20px 5px;
+  width: 80px;
+}
+
+.form2 input {
+  padding: 10px 20px 5px;
+  width: 150px;
+  margin: 15px;
+}
+.form2 select {
+  padding: 10px;
+  margin: 20px;
+  gap: 5px;
+}
+.form {
+  margin: 15px;
+}
+.bttn3 {
+  width: 150px;
+  height: 40px;
+  color: rgb(253, 5, 5);
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 10px 40px;
+  margin: 30px;
+}
+.col-12 .bttn3:hover {
+  background-color: red;
+  color: white;
+}
+
+.foodorder {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  gap: 15px;
+  position: relative;
+  border: 10px solid rgb(214, 214, 214);
+  padding: 10px;
+}
+.UserName {
+  display: flex;
+  padding: 5px;
+}
+
+.cont5 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.cont5 h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 120px;
+  -webkit-text-stroke: 3px rgb(222, 226, 230);
+}
+
+.cont5 h2 {
+  position: absolute;
+  text-transform: capitalize;
+  color: rgba(128, 128, 128, 0.59);
+}
+
+.cont5 h2 span {
+  color: red;
+}
+.footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.bttn2 {
+  width: 150px;
+  height: 40px;
+  color: red;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 10px 40px;
+  margin: 15px;
+}
+.footer .bttn2:hover {
+  background-color: red;
+  color: white;
+}
+
+.AAA {
+  text-align: center;
+  font-size: 40px;
+  font-style: italic;
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    align-items: none;
+    /* margin-top: 50px; */
+  }
+  .home-food h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home {
+    align-items: normal;
+    /* margin: 0px; */
+  }
+  .home-food h3 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .content h1 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .firstCards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .firstCards {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .secoundCards {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .cont h1 {
+    font-size: 60px;
+  }
+  .secoundCards .longCard .btn {
+    width: 130px;
+    padding: 10px 40px;
+    width: 180px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .foodservice {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .foodservice {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .cont1 h1 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cards2 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .cont2 h1 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .F-R {
+    margin-top: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .F-R {
+    margin-top: 60%;
+  }
+  .foodreview {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .foodreview {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .cont3 h1 {
+    font-size: 60px;
+  }
+  .cont3 h2 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .foodorder {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .cont4 h1 {
+    font-size: 85px;
+  }
+  .foodorder img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .input-name,
+  .form,
+  .form2 {
+    margin: 0px;
+  }
+  .form {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container {
+    width: 95%;
+  }
+.FlexNav ul{
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+
+}
+  .input-name {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+   grid-template-columns: repeat(3 , 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .cont5 h1{
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .container{
+    width: 95%;
+  }
+}
